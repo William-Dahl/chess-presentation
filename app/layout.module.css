@@ -1,0 +1,7 @@
+.footerStyles {
+    display: flex; 
+    width: calc(100vw - 32px);
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10;
+}

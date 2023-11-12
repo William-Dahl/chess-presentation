@@ -1,7 +1,8 @@
 {
-  "name": "chess",
+  "name": "chess-presentation",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

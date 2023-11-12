@@ -1,7 +1,6 @@
-/** @jsxImportSource @emotion/react */
-"use client";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+import styles from "./layout.module.css";
 
 const inter = Raleway({ weight: "400", subsets: ["latin"] });
 
@@ -20,30 +19,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <footer
-          css={{
-            display: "flex",
-            width: "calc(100vw - 34px)",
-            justifyContent: "space-between",
-            position: "absolute",
-            padding: 12,
-            bottom: 0,
-          }}
-        >
-          <div>
+        <footer className={styles.footerStyles}>
+          <span>
             Made by William Dahl,{" "}
             <a href="https://www.linkedin.com/in/william-dahl/">
               see my linkedin
             </a>
             .
-          </div>
-          <div>
+          </span>
+          <span>
             {" "}
             Source code can be viewed{" "}
             <a href="https://github.com/William-Dahl/chess-presentation">
               here
             </a>
-          </div>
+          </span>
         </footer>
       </body>
     </html>
