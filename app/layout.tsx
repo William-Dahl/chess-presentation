@@ -27,7 +27,7 @@ export default function RootLayout({
             </a>
             .
           </span>
-          <span>
+          <span className={styles.footerRight}>
             {" "}
             Source code can be viewed{" "}
             <a href="https://github.com/William-Dahl/chess-presentation">

@@ -33,13 +33,13 @@ function renderSquares(pieces: PieceRecord[]) {
       const squareCoord: Coord = [row, col];
 
       const piece = pieces.find((piece) =>
-        isEqualCoord(piece.location, squareCoord),
+        isEqualCoord(piece.location, squareCoord)
       );
 
       squares.push(
         <Square location={squareCoord}>
           {piece && pieceLookup[piece.type]()}
-        </Square>,
+        </Square>
       );
     }
   }
@@ -59,8 +59,8 @@ const chessboardStyles = css({
   display: "grid",
   gridTemplateColumns: "repeat(8, 1fr)",
   gridTemplateRows: "repeat(8, 1fr)",
-  width: "500px",
-  height: "500px",
+  width: "390px",
+  height: "390px",
   border: "3px solid lightgrey",
 });
 

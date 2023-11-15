@@ -26,5 +26,5 @@ const pageStyles = css({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "95vh",
+  height: "92vh",
 });

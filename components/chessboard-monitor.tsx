@@ -46,7 +46,7 @@ export function canMove(
   start: Coord,
   destination: Coord,
   pieceType: PieceType,
-  pieces: PieceRecord[],
+  pieces: PieceRecord[]
 ) {
   const rowDist = Math.abs(start[0] - destination[0]);
   const colDist = Math.abs(start[1] - destination[1]);
@@ -72,13 +72,13 @@ function renderSquares(pieces: PieceRecord[]) {
       const squareCoord: Coord = [row, col];
 
       const piece = pieces.find((piece) =>
-        isEqualCoord(piece.location, squareCoord),
+        isEqualCoord(piece.location, squareCoord)
       );
 
       squares.push(
         <Square pieces={pieces} location={squareCoord}>
           {piece && pieceLookup[piece.type](squareCoord)}
-        </Square>,
+        </Square>
       );
     }
   }
@@ -111,7 +111,7 @@ function Chessboard() {
         }
 
         const piece = pieces.find((p) =>
-          isEqualCoord(p.location, sourceLocation),
+          isEqualCoord(p.location, sourceLocation)
         );
         const restOfPieces = pieces.filter((p) => p !== piece);
 
@@ -135,8 +135,8 @@ const chessboardStyles = css({
   display: "grid",
   gridTemplateColumns: "repeat(8, 1fr)",
   gridTemplateRows: "repeat(8, 1fr)",
-  width: "500px",
-  height: "500px",
+  width: "390px",
+  height: "390px",
   border: "3px solid lightgrey",
 });
 
